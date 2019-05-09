@@ -1,0 +1,8 @@
+test/
+*.fasta.*
+*.bam
+*.vcf*
+*.dict
+*.bai
+*.log
+*.metrics
