@@ -13,7 +13,6 @@ Following is a list of thirty-party progams that will be used in pbsnp pipeline.
 - [picard](https://github.com/broadinstitute/picard)
 - [samtools](https://github.com/samtools/samtools)
 
-[](- [snakemake](https://snakemake.readthedocs.io/(optional)))
 
 ## Install
 1. Download
