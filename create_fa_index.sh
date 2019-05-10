@@ -59,23 +59,17 @@ fi
 
 #Determine the fasta index fai dict whether if exist
 if [ ! -e ${fasta}.fai ]; then
-    echo "[INFO] Create ${fasta}.fai ..."
+    echo "[INFO] Creating ${fasta}.fai..."
     samtools faidx $fasta
-    echo "Done"
+    echo "[INFO] Done"
 fi
 
 fa_prefix=$(echo $fasta |sed "s/.fa.*//")
 if [ ! -e ${fa_prefix}.dict ]; then
-    echo -e "[INFO] Create ${fa_prefix}.dict..."
+    echo -e "[INFO] Creating ${fa_prefix}.dict..."
     java -jar $picard CreateSequenceDictionary R=$fasta O=${fa_prefix}.dict
-    echo "Done"
+    echo "[INFO] Done"
 fi
-:<<!
-if [ ! -e ${fasta}.bwt ]; then
-    echo "Create ${fasta}.bwt ..."
-    bwa index -a bwtsw ${fasta}
-    echo "Done"
-fi
-!
+
 echo -e "[INFO] $fasta index was created."
 
