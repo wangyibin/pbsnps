@@ -1,6 +1,13 @@
 # pbsnp
-## Instroduce
-### The pipeline of pacbio reads snps calling by gatk4
+## Instruction
+pbsnp is the pipeline of snps calling from pacbio reads by gatk4.
+If run it, following steps will execute:
+```
+graph LR
+minimap2 --> samtools sort
+samtools sort --> MarkDuplicates
+MarkDuplicates --> gatk HC
+```
  
 ## Dependencies
 Following is a list of thirty-party progams that will be used in pbsnp pipeline.
@@ -8,7 +15,8 @@ Following is a list of thirty-party progams that will be used in pbsnp pipeline.
 - [gatk4 v4.0+](https://software.broadinstitute.org/gatk/)
 - [picard](https://github.com/broadinstitute/picard)
 - [samtools](https://github.com/samtools/samtools)
-[](- [snakemake](https://snakemake.readthedocs.io/)(optional))
+
+[](- [snakemake](https://snakemake.readthedocs.io/(optional)))
 
 ## Install
 1. Download
