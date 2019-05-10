@@ -11,7 +11,7 @@ Following is a list of thirty-party progams that will be used in pbsnp pipeline.
 ## Install
 1. Download
 ```bash
-git clone 
+git clone https://github.com/wangyibin/pbsnps.git
 ```
 2. Configure
 ```bash
