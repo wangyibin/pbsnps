@@ -2,12 +2,9 @@
 ## Instruction
 pbsnp is the pipeline of snps calling from pacbio reads by gatk4.
 If run it, following steps will execute:
-```
-graph LR
-minimap2 --> samtools sort
-samtools sort --> MarkDuplicates
-MarkDuplicates --> gatk HC
-```
+
+   `minimap2` --> `samtools sort` --> `MarkDuplicates` --> `gatk HC`
+
  
 ## Dependencies
 Following is a list of thirty-party progams that will be used in pbsnp pipeline.
