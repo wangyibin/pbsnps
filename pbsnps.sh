@@ -58,7 +58,7 @@ echo -e "[INFO] sorting bam..."
 #    VALIDATION_STRINGENCY=LENIENT \
 #    MAX_RECORDS_IN_RAM=300000
 
-samtools sort -O BAM -o ${sample}.sorted.bam -T ${samplt}.temp -@ ${thread} ${samtools}.aln.bam
+samtools sort -@ ${thread} -o ${sample}.sorted.bam ${samtools}.aln.bam
 if [ ! -s ${sample}.sorted.bam ];then
     echo -e "[ERROR] Failed to execute SortSam, please check the detail in $logfile";
     exit
