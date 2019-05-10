@@ -1,12 +1,11 @@
 #!/bin/bash
 
 VERSION="1.0"
-AUTHOR="Yibin Wang"
+
 PROG="$(basename $0)"
 function info {
     echo
     echo "To create fasta index, to variants calling."
-    echo "                                Copyright:$AUTHOR"
     echo
 }
 
@@ -68,7 +67,7 @@ fi
 fa_prefix=$(echo $fasta |sed "s/.fa.*//")
 if [ ! -e ${fa_prefix}.dict ]; then
     echo -e "[INFO] Create ${fa_prefix}.dict..."
-    java -jar /public1/home/stu_wangyibin/software/picard.jar CreateSequenceDictionary R=$fasta O=${fa_prefix}.dict
+    java -jar $picard CreateSequenceDictionary R=$fasta O=${fa_prefix}.dict
     echo "Done"
 fi
 :<<!
